@@ -42,7 +42,7 @@ public class StartStopCommandExecutor implements CommandExecutor {
             Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Krenzinator game stopped!");
         } else if (subcommand.compareToIgnoreCase("status") == 0) {
             
-            if(krenzinator.getRunning()) {
+            if(krenzinator.isRunning()) {
                 Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Krenzinator game is running!");
             } else {
                 Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Krenzinator game is stopped!");
