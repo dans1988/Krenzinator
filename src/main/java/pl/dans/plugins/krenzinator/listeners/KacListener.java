@@ -29,7 +29,7 @@ public class KacListener implements Listener{
     @EventHandler(priority = EventPriority.NORMAL)
     public void death(final PlayerDeathEvent playerDeathEvent) {
         
-        if (!krenzinator.getRunning()) {
+        if (!krenzinator.isRunning()) {
             return;
         }
         

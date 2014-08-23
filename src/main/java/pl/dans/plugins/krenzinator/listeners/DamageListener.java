@@ -27,7 +27,7 @@ public class DamageListener implements Listener{
     @EventHandler(priority = EventPriority.HIGH)
     public void death(final EntityDamageByEntityEvent entityDamageByEntityEvent) {
         
-        if (!krenzinator.getRunning()) {
+        if (!krenzinator.isRunning()) {
             return;
         }
         

@@ -26,7 +26,7 @@ public class CraftListener implements Listener {
     @EventHandler
     public void onCraft(final CraftItemEvent craftItemEvent)  {
         
-        if (!krenzinator.getRunning() || craftItemEvent.isCancelled()) {
+        if (!krenzinator.isRunning() || craftItemEvent.isCancelled()) {
             return;
         }
         

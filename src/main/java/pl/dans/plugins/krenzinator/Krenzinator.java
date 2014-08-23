@@ -1,7 +1,5 @@
 package pl.dans.plugins.krenzinator;
 
-import java.util.Iterator;
-import java.util.logging.Level;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -13,6 +11,9 @@ import pl.dans.plugins.krenzinator.listeners.CraftListener;
 import pl.dans.plugins.krenzinator.listeners.DamageListener;
 import pl.dans.plugins.krenzinator.listeners.HorseListener;
 import pl.dans.plugins.krenzinator.listeners.KacListener;
+
+import java.util.Iterator;
+import java.util.logging.Level;
 
 /**
  * Hello world!
@@ -45,7 +46,7 @@ public class Krenzinator extends JavaPlugin
         getLogger().log(Level.INFO, "{0}onDisable", ChatColor.RED);
     }
 
-    public boolean getRunning() {
+    public boolean isRunning() {
         return running;
     }
 

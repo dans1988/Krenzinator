@@ -28,7 +28,7 @@ public class HorseListener implements Listener{
     @EventHandler
     public void onMount(final VehicleEnterEvent e) {
         
-        if (!krenzinator.getRunning()) {
+        if (!krenzinator.isRunning()) {
             return;
         }
         
