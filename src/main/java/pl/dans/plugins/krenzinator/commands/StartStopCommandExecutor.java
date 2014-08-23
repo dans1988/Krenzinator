@@ -36,18 +36,22 @@ public class StartStopCommandExecutor implements CommandExecutor {
             krenzinator.setRunning(true);
             krenzinator.addDiamondRecipe();
             Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Krenzinator game started!");
-        } else if (subcommand.equalsIgnoreCase("stop")) {
+            return true;
+        }
+
+        if (subcommand.equalsIgnoreCase("stop")) {
             krenzinator.setRunning(false);
             krenzinator.removeDiamondRecipe();
             Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Krenzinator game stopped!");
-        } else if (subcommand.equalsIgnoreCase("status")) {
-            if(krenzinator.getRunning()) {
-                Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Krenzinator game is running!");
-            } else {
-                Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Krenzinator game is stopped!");
-            }
+            return true;
         }
-        return true;
+
+        if (subcommand.equalsIgnoreCase("status")) {
+            Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Krenzinator game is " + (krenzinator.getRunning() ? "running!" : "stopped!"));
+            return true;
+        }
+
+        return false;
     }
     
 }
