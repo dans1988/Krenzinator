@@ -1,0 +1,14 @@
+name: Krenzinator
+main: pl.dans.plugins.krenzinator.Krenzinator
+version: 1.0
+  
+commands:
+  krenz:
+    description: Basic commands for Krenzinator
+    usage: /<command> <subcommand>
+    permission: Krenzinator.basic
+    permission-message: You don't have <permission>
+permissions:
+    Krenzinator.basic:
+        description: Allows use of the commands in the plugin
+        default: op
