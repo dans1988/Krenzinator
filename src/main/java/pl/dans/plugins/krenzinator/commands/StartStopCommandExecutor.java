@@ -32,16 +32,15 @@ public class StartStopCommandExecutor implements CommandExecutor {
         
         String subcommand = args[0];
         
-        if (subcommand.compareToIgnoreCase("start") == 0) {
+        if (subcommand.equalsIgnoreCase("start")) {
             krenzinator.setRunning(true);
             krenzinator.addDiamondRecipe();
             Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Krenzinator game started!");
-        } else if (subcommand.compareToIgnoreCase("stop") == 0) {
+        } else if (subcommand.equalsIgnoreCase("stop")) {
             krenzinator.setRunning(false);
             krenzinator.removeDiamondRecipe();
             Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Krenzinator game stopped!");
-        } else if (subcommand.compareToIgnoreCase("status") == 0) {
-            
+        } else if (subcommand.equalsIgnoreCase("status")) {
             if(krenzinator.getRunning()) {
                 Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Krenzinator game is running!");
             } else {
