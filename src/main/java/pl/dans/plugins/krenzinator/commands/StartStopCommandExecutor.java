@@ -26,7 +26,7 @@ public class StartStopCommandExecutor implements CommandExecutor {
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (args == null || args.length == 0) {
+        if (args.length == 0) {
             return false;
         }
         
