@@ -1,14 +1,17 @@
-name: Krenzinator
-main: pl.dans.plugins.krenzinator.Krenzinator
+name: AchievementHunters
+main: pl.dans.plugins.hunters.AchievementHunters
 version: 1.0
   
 commands:
-  krenz:
-    description: Basic commands for Krenzinator
+  ahunters:
+    description: Basic commands for AchievementHunters
     usage: /<command> <subcommand>
-    permission: Krenzinator.basic
+    permission: AchievementHunters.basic
     permission-message: You don't have <permission>
+  alist:
+    description: Basic commands for AchievementHunters
+    usage: /<command>
 permissions:
-    Krenzinator.basic:
+    AchievementHunters.basic:
         description: Allows use of the commands in the plugin
         default: op
