@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.dans.plugins</groupId>
-    <artifactId>AchievementHunters</artifactId>
+    <artifactId>Krenzinator</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>AchievementHunters</name>
+    <name>Krenzinator</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -18,14 +18,16 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.8.4-R0.1-SNAPSHOT</version>
+            <!-- Bukkit API Version, change if necessary -->
+            <version>1.7.2-R0.3</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
-    
+  
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+            <id>bukkit-repo</id>
+            <url>http://repo.bukkit.org/content/groups/public/</url>
         </repository>
     </repositories>
 </project>
