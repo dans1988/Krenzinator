@@ -21,6 +21,9 @@ import pl.dans.plugins.krenzinator.Krenzinator;
  */
 public class KacListener implements Listener{
     private final Krenzinator krenzinator;
+    
+    private static final String KAC_UUID = "f6eb67da-99f1-4352-b5c5-c0440be575f1";
+    private static final String GNOME_UUID = "42d908a4-c270-4059-b796-53d217f9429f";
 
     public KacListener(Krenzinator krenzinator) {
         this.krenzinator = krenzinator;
@@ -35,8 +38,7 @@ public class KacListener implements Listener{
         
         Player victim =  playerDeathEvent.getEntity();
         
-        if (victim.getName().equals("kacperrutka26")
-                || victim.getName().equals("SergeantGnome")) {
+        if (victim.getUniqueId().toString().equals(KAC_UUID) || victim.getUniqueId().toString().equals(GNOME_UUID)) {
         
             ItemStack diamonds = new ItemStack(Material.DIAMOND, 10);
 
